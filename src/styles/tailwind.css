@@ -1,0 +1,93 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Core Colors */
+    --color-background: #0d1117; /* GitHub dark canvas */
+    --color-foreground: #f0f6fc; /* High contrast white */
+    --color-border: #30363d; /* GitHub subtle divider */
+    --color-input: #161b22; /* Elevated container background */
+    --color-ring: #1f6feb; /* GitHub link blue */
+    
+    /* Card Colors */
+    --color-card: #161b22; /* Elevated container background */
+    --color-card-foreground: #f0f6fc; /* High contrast white */
+    
+    /* Popover Colors */
+    --color-popover: #161b22; /* Elevated container background */
+    --color-popover-foreground: #f0f6fc; /* High contrast white */
+    
+    /* Muted Colors */
+    --color-muted: #21262d; /* Slightly lighter than surface */
+    --color-muted-foreground: #8b949e; /* Muted gray */
+    
+    /* Primary Colors */
+    --color-primary: #238636; /* GitHub success green */
+    --color-primary-foreground: #ffffff; /* white */
+    
+    /* Secondary Colors */
+    --color-secondary: #1f6feb; /* GitHub link blue */
+    --color-secondary-foreground: #ffffff; /* white */
+    
+    /* Destructive Colors */
+    --color-destructive: #f85149; /* GitHub danger red */
+    --color-destructive-foreground: #ffffff; /* white */
+    
+    /* Accent Colors */
+    --color-accent: #161b22; /* Elevated container background */
+    --color-accent-foreground: #f0f6fc; /* High contrast white */
+    
+    /* Success Colors */
+    --color-success: #2ea043; /* Slightly brighter green */
+    --color-success-foreground: #ffffff; /* white */
+    
+    /* Warning Colors */
+    --color-warning: #d29922; /* Amber */
+    --color-warning-foreground: #000000; /* black */
+    
+    /* Error Colors */
+    --color-error: #da3633; /* Urgent red */
+    --color-error-foreground: #ffffff; /* white */
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+  }
+  
+  code, pre, .font-mono {
+    font-family: 'JetBrains Mono', 'Fira Code', 'Monaco', 'Consolas', monospace;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+  
+  .animate-pulse-slow {
+    animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  }
+  
+  .transition-smooth {
+    transition: all 150ms ease-out;
+  }
+  
+  .transition-expand {
+    transition: height 300ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+}
